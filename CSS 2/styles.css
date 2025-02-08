@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    font-family: lato;
+}
+
+/* styling for first section div */
+
+#first-div{
+    padding: 72px 264px 65px 245px;
+    background: white;
+    padding-left: 20rem;
+    padding-top: 10rem;
+    
+}
+
+#first-div p{
+    width: 400px;
+    font-size: 20px;
+    
+}
+
+span{
+    color: green;
+    font-weight: bolder;
+}
+
+h2{
+    margin-bottom: 3rem;
+}
+
+#first-div-p2{
+    margin-top: 2rem;
+}
+
+
+
+/*styling for second section div */
+.second-div{
+    padding: 72px 264px 65px 245px;
+    top: 300px;
+    background: #999999;
+    padding-left: 20rem;
+    
+}
+
+.inner-div{
+    
+    width: 80%;
+    height: 225px;
+    background: white;
+    padding-left: 10px;
+    padding-top: 3.5rem;
+    margin-top: 4rem;
+    border-bottom: 7px solid rgb(143, 141, 141);
+   
+}
+
+
+#second-div-p2{
+    margin-top: 1rem;
+}
+
+
+.box-header{
+    position: absolute;
+    margin-top: 4.3rem;
+    margin-left: -4px;
+    
+}
+
+button{
+width: 250px;
+height: 35px;
+background: #ffbf00;
+border: none;
+border-bottom: 5px solid #cd9c08;
+   font-weight: bolder;
+   font-size: large;
+}
+
+/* Mobile (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    #first-div, .second-div {
+        padding: 3rem 2rem;
+    }
+    
+
+    #first-div p {
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .inner-div {
+        width: 115%;
+        height: 500px;
+        padding: 3rem 2rem;
+        margin-top: -10px;
+        margin-left: -30px;
+    }
+
+    #second-div-p1{
+        margin-top: 50px;
+    }
+
+    .second-div p{
+        width: 350px;
+        word-spacing: 5px;
+    }
+    
+    
+    .box-header {
+        position: absolute;
+        text-align: center;
+        margin-top: -0rem;
+        width: 80%;
+        margin-left: -30px;
+    }
+    
+    button {
+        width: 85%;
+        font-size: large;
+        height: 75px;
+        padding: 25px;
+        padding-left: 2px;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    #first-div, .second-div {
+        padding: 5rem 10rem;
+    }
+    
+    #first-div p {
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    
+
+    .inner-div {
+        width: %;
+        height: 150px;
+        padding: 3rem 2rem;
+        margin-top: -10px;
+        margin-left: -30px;
+    }
+
+    #second-div-p1{
+        margin-top: 50px;
+}
+
+/* Desktop (min-width: 1025px) */
+@media screen and (min-width: 1025px) {
+    #first-div {
+        padding: 10rem 20rem;
+    }
+    
+    .second-div {
+        padding: 72px 264px 65px 245px;
+        padding-left: 20rem;
+    }
+    
+    .inner-div {
+        width: 80%;
+        padding-left: 10px;
+        padding-top: 3.5rem;
+        margin-top: 4rem;
+    }
+}
+

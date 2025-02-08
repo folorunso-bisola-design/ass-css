@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: radial-gradient(whitesmoke, #475569);
+}
+
+.content{
+   margin-top: 80px;
+   display: flex;
+    justify-content: center;
+}
+
+#intro{
+    font-size: 70px;
+}
+
+.content p{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.links{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+
+.links a{
+    color: rgb(215, 222, 222);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.para{
+    margin-top: 70px;
+}
+
+.dynamic-text-color{
+    color: blue;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    padding: 8px;
+    color: black;
+    background-color: white;
+    font-size: large;
+}
+
+a:focus {
+    color: red;
+}
+
+a{
+    color: blue;
+    display: flex;
+    justify-content: center;
+}

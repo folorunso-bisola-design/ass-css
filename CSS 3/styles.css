@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+
+body{
+  background: black;
+  display: flex;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+}
+
+/* css for box header */
+.box-header{
+  position: absolute;
+    margin-left: -1rem;
+    margin-right: 1.25rem;
+    margin-bottom: 26rem;
+  
+}
+
+.button{
+  width: 100%;
+  height: 40px;
+  background: rgb(209, 209, 112);
+  background-color: none;
+  border: none;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+/* styling for parent div */ 
+.parent{
+    margin-top: 4rem;
+    width: 60rem;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    background: #9b9bc7;
+    border: 10px solid white;
+}
+
+
+/* styling for child div image */
+img{
+  width: 100%;
+  display: block;
+  height: 20rem;
+}
+
+/* styling for child div */
+.child{
+  display: grid;
+  align-items: center;
+  grid-template-rows: 2fr 1fr;
+  height: 30rem;
+  width: 31rem;
+  overflow: hidden;
+  border-radius: 15px;
+  letter-spacing: 1.0px;
+  background-color: white;
+
+}
+
+
+
+.grid-two p{
+  background: white;
+  padding-left: 19px;
+}
+
+.grid-two strong{
+  font-weight: bolder;
+  font-size: 25px;
+
+}
+
+
+#first-paragraph{
+  margin-bottom: 10px;
+}
+
+.grid-two p{
+  width: 450px;
+  font-weight: bold;
+}
+
+/* Tablet View (min-width: 600px) */
+@media screen and (max-width: 480px) {
+  .parent {
+      width: 80%;
+      padding: 2rem;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  .child {
+      grid-template-rows: 2fr 1fr;
+      width: 80%;
+  }
+  .grid-two p {
+      font-size: 1rem;
+  }
+  .button {
+      font-size: 1.2rem;
+  }
+}
+
+/* Small Laptops (min-width: 768px) */
+@media (min-width: 768px) {
+  .parent {
+      width: 70%;
+  }
+  .child {
+      width: 75%;
+  }
+  .grid-two p {
+      font-size: 1.05rem;
+  }
+}
+
+/* Desktop View (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .parent {
+      width: 60rem;
+      height: 35rem;
+  }
+  .child {
+      width: 31rem;
+      height: 30rem;
+  }
+  .grid-two p {
+      font-size: 1.1rem;
+      width: 450px;
+  }
+  .button {
+      font-size: 1.5rem;
+  }
+}

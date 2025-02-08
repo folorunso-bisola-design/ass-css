@@ -1,0 +1,1259 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ------------------------------- */
+/* Font Imports */
+/* ------------------------------- */
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/gilroy/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/gilroy/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+
+    font-family: 'Gilroy';
+    /* font-weight: 400; */
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    /* min-height: 100vh; */
+    max-height: max-content;
+    overflow: scroll;
+    line-height: 1.5;
+
+    font-family: 'Gilroy';
+    font-size: 1rem;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* make images easir to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* ------------------------------- */
+/* Utility Classes                 */
+/* ------------------------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
+
+.padding-t-b {
+    padding-top: var(--padding, 1rem);
+    padding-bottom: var(--padding, 1rem);
+}
+
+.padding-l-r {
+    padding-left: var(--padding, 1rem);
+    padding-right: var(--padding, 1rem);
+}
+
+.padding-t {
+    padding-top: var(--padding, 1rem);
+}
+
+.padding-b {
+    padding-bottom: var(--padding, 1rem);
+}
+
+.padding {
+    padding: var(--padding, 1rem);
+}
+
+.margin-t-b {
+    margin-top: var(--margin, 1rem);
+    margin-bottom: var(--margin, 1rem);
+}
+
+.margin-l-r {
+    margin-left: var(--margin, 1rem);
+    margin-right: var(--margin, 1rem);
+}
+
+.margin-t {
+    margin-top: var(--margin, 1rem);
+}
+
+.margin-b {
+    margin-bottom: var(--margin, 1rem);
+}
+
+.margin {
+    margin: var(--margin, 1rem);
+}
+
+.blue {
+    color: #0065FE;
+}
+
+.container {
+    max-width: 1200px;
+    /* width: 90%; */
+    margin: 0 auto;
+    /* padding: 0 1rem; */
+}
+
+.container-inline {
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+.logos {
+    /* outline: auto; */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bars {
+    font-size: 20px;
+    color: #0065FE;
+}
+
+.navs,
+.navDiv2 {
+    display: none;
+}
+
+main {
+    padding: 0 1rem;
+    font-family: 'Gilroy';
+    /* height: 850vh; */
+    /* overflow: scroll; */
+}
+
+.hero {
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+
+    /* height: 100vh; */
+}
+
+.heroHeaderText {
+    flex-direction: column;
+
+
+    color: var(--Text-Color-Main-text, #141414);
+    text-align: center;
+    /* font-family: 'Gilroy'; */
+    font-size: 1.5rem;
+    font-style: normal;
+    /* line-break: normal; */
+    /* 200% */
+}
+
+.coloredHeroText,
+h1 {
+    font-weight: 700;
+    /* font-family: 'Gilroy '; */
+    line-height: 3rem;
+}
+
+.coloredHeroText {
+    flex-direction: column;
+    gap: 0rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--Primary-400, #005AE2);
+}
+
+/* .coloredHeroDash {
+     width: 50%; 
+} */
+
+.heroPhg {
+    color: var(--Text-Color-Main-text, #141414);
+    text-align: center;
+    /* font-family: Gilroy-Medium; */
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+
+    /* max-width: 80%; */
+    /* margin: 0 auto; */
+    /* 155.556% */
+}
+
+.heroButtons {
+    align-items: center;
+    justify-content: center;
+}
+
+.heroButton {
+    display: flex;
+    width: 8.875rem;
+    height: 2.75rem;
+    padding: 0.75rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    /* gap: 0.625rem; */
+
+    border-radius: 6.25rem;
+    border: 0.125rem solid transparent;
+}
+
+.heroButton1 {
+    background: var(--Primary-300---base, #0065FE);
+    color: var(--Text-Color-White, #FFFFFF);
+}
+
+.heroButton2 {
+    /* background: var(--Primary-300---base, #0065FE); */
+    color: var(--Text-Color-White, #0065FE);
+}
+
+.heroImageDiv {
+    gap: 0rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* outline: auto; */
+}
+
+.heroImage {
+    width: 90%;
+    height: auto;
+}
+
+
+.featuresDiv {
+    margin-top: 3rem;
+    /* text-align: center; */
+}
+
+.featuresInnerDiv {
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+
+    background: #deecfb;
+    /* background: #F9FBFD; */
+}
+
+.featuresHeaderDiv {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-Bold; */
+    font-size: 1.5rem;
+    font-style: normal;
+    /* font-weight: 400; */
+    /* line-height: 3rem; */
+    /* 120% */
+}
+
+.featuresHeaderDiv,
+h2 {
+    /* text-align: center; */
+    line-height: 3rem;
+}
+
+.featuresAchiveDiv {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+.featuresAchive {
+    flex-direction: column;
+    gap: .5rem;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.featuresAchive>h3 {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-SemiBold; */
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 2.5rem; */
+    /* 125% */
+}
+
+.featuresAchive>p {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-Medium; */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: 1.5rem; */
+    /* 150% */
+}
+
+.featuresInnerDiv1 {
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.featuresWhyHeaderDiv {
+    flex-direction: column;
+}
+
+.featuresWhyHeaderDivInner {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-Bold; */
+    font-size: 1.5rem;
+    font-style: normal;
+    /* font-weight: 400; */
+    /*  line-height: 3rem; */
+}
+
+/* .line {} */
+
+.featurewhyHeader {
+    line-height: 3rem;
+}
+
+.featurewhyPhg {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-Medium; */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+    /* 175% */
+}
+
+
+.featuresWhyDiv {
+    gap: 1.5rem;
+}
+
+.featuresWhy {
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.featuresWhyIconDiv {
+    width: 3.5rem;
+    height: 3.5rem;
+    aspect-ratio: 1;
+    background-color: rgba(50, 132, 255, 0.13);
+    border-radius: 5rem;
+
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.whyIcon {
+    font-size: 1.5rem;
+}
+
+.featuresWhyh3 {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-SemiBold; */
+    /* font-size: 2rem; */
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75rem;
+    /* 87.5% */
+}
+
+.featuresWhyPhg2 {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-Medium; */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* 150% */
+}
+
+.pricingDiv {
+    margin-top: 3rem;
+}
+
+/* .pricingHeaderDiv {} */
+
+/* .pricingHeaderDivInner {} */
+
+.pricingHeaderDivInner>h2 {
+    color: var(--Text-Color-Main-text, #141414);
+    /* text-align: center; */
+    /* font-family: Gilroy-Bold; */
+    font-size: 2.5rem;
+    font-style: normal;
+    /* font-weight: 400; */
+    line-height: 3rem;
+    /* 120% */
+}
+
+.pricingHeaderPhg {
+    color: var(--Text-Color-Main-text, #141414);
+    /* text-align: center; */
+    /* font-family: Gilroy-Medium; */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* 150% */
+}
+
+.pricingContainer {
+    flex-direction: column;
+}
+
+.pricingCardBasic {
+    /* outline: auto; */
+    flex-direction: column;
+    padding: 4rem 0rem;
+    padding-left: 6rem;
+    /* justify-content: center; */
+    align-items: flex-start;
+    gap: 2rem;
+
+    /* height: 60vh; */
+    color: var(--Text-Color-Main-text, #141414);
+    border-radius: 0.75rem;
+    border: 0.4px solid var(--Primary-400, #005AE2);
+    background: var(--Neutral-White, #FFF);
+
+    /* Drop shadow */
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.pricingCardBasicHeader {
+    /* text-align: start; */
+    /* font-family: Gilroy-Medium; */
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem;
+    /* 133.333% */
+}
+
+.pricingCardBasicInner {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pricingCardBasicInnerHeader {
+    /* color: var(--Text-Color-Main-text, #141414); */
+    /* text-align: center; */
+
+    /* H0/Bold */
+    /* font-family: Gilroy-Bold; */
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    /* 120% */
+}
+
+.pricingCardBasicInnerPhg {
+    /* color: var(--Text-Color-Main-text, #141414); */
+    /* text-align: center; */
+    /* font-family: Gilroy-Medium; */
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+    /* 160% */
+}
+
+.pricingCardBasicFeaturesContainer {
+    flex-direction: column;
+}
+
+.pricingCardBasicFeatures {
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.checkmark {
+    color: #005AE2;
+}
+
+.pricingCardBasicFeaturesPhg {
+    /* color: var(--Text-Color-Main-text, #141414); */
+    text-align: center;
+    /* font-family: Gilroy-Medium; */
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* 171.429% */
+}
+
+.pricingCardPro {
+    /* outline: auto; */
+    flex-direction: column;
+    padding: 7rem 0rem;
+    padding-left: 6rem;
+    /* justify-content: center; */
+    align-items: flex-start;
+    gap: 2rem;
+
+    background-color: #1E3448;
+    color: white;
+
+    border-radius: 0.75rem;
+    /* height: 60vh; */
+}
+
+.pricingButtons {
+    align-items: center;
+    justify-content: center;
+}
+
+.pricingButton {
+    display: flex;
+    width: 12.5rem;
+    height: 3rem;
+    padding: 0.75rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 6.25rem;
+    border: 1px solid var(--Primary-300---base, #0065FE);
+
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0.75rem;
+    /* 75% */
+}
+
+.pricingButton1 {
+    color: #0065FE;
+    background-color: white;
+}
+
+.pricingButton2 {
+    color: #FFFFFF;
+    border-radius: 6.25rem;
+    background: var(--Primary-300---base, #0065FE);
+}
+
+
+.urlDiv {
+    margin-top: 3rem;
+    height: 60vh;
+    background-image: url('./assets/background1.png');
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* padding: 5rem; */
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2rem;
+
+    border-radius: 0.75rem;
+    border: 0.4px solid transparent;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.urlForm {
+    background: white;
+    border-radius: 0.75rem;
+    background: #FFF;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* padding: ; */
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+
+    border-radius: 0.75rem;
+    border: 1px solid var(--Primary-100, #3284FF);
+}
+
+input::placeholder {
+    /* color: var(--Primary-100, #3284FF); */
+    color: var(--Primary-100, #3284FF);
+    /* font-family: Gilroy-Medium; */
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem;
+    /* 150% */
+}
+
+.urltext {
+    /* width: 24.5rem; */
+    width: 100%;
+
+    height: 2.4375rem;
+    padding: 0.5rem 0.75rem;
+}
+
+
+.urlSelect {
+    border-radius: 0.75rem;
+    border: 1px solid var(--Primary-100, #3284FF);
+
+    display: flex;
+    /* width: 12.625rem; */
+    height: 2rem;
+    /* padding: 1.125rem 1.25rem; */
+    align-items: center;
+    gap: 0.625rem;
+    width: 50%;
+
+    color: #3284FF;
+
+    /* font-family: Gilroy-Medium; */
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.urltext1 {
+    display: flex;
+    width: 50%;
+    height: 2rem;
+    padding: 0.5rem 0.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+
+    border-radius: 0.75rem;
+    border: 1px solid #3284FF;
+}
+
+.urlBtn {
+    display: flex;
+    width: 100%;
+    padding: 0.5rem .5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 6.25rem;
+    border: 1px solid transparent;
+    background: var(--Primary-400, #005AE2);
+
+    color: white;
+
+    font-size: 0.575rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.75rem;
+    /* 85.714% */
+}
+
+.urlPhg {
+    color: var(--Primary-100, #3284FF);
+
+    /* Body/Bold */
+    /* font-family: Gilroy-Bold; */
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.faqsDiv {
+    margin-top: 3rem;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.faqsInnerDiv {
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+details>p {
+    color: var(--Text-Color-Main-text, #141414);
+    /* font-family: Gilroy-Medium; */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem;
+
+    /* outline: auto; */
+    padding: 0rem 1rem;
+}
+
+summary {
+    /* font-family: Gilroy-Bold; */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+
+.actionCallDiv {
+    margin-top: 3rem;
+    height: 50vh;
+    width: 100%;
+    background-image: url('./assets/background2.png');
+    text-align: center;
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* padding: 5rem; */
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-around;
+    padding: 0rem 2rem;
+
+    border-radius: 0.75rem;
+    border: 0.4px solid transparent;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.actionCallHeader {
+    color: #FFF;
+    text-align: center;
+    /* font-family: Gilroy-Bold; */
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+    /* 120% */
+}
+
+.actionCallBtn {
+    display: flex;
+    width: 12.5rem;
+    height: 3rem;
+    padding: 0.75rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 6.25rem;
+    border: 1px solid transparent;
+    background: var(--Primary-400, #005AE2);
+
+    color: var(--Neutral-White, #FFF);
+    /* font-family: Gilroy-SemiBold; */
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 0.75rem;
+    /* 75% */
+}
+
+.footer {
+    margin-top: 3rem;
+    flex-direction: column;
+    gap: 3rem;
+
+    background-image: url('./assets/footer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: ; */
+
+}
+
+.footerlogoDiv {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footerlogo {
+    width: 50%;
+}
+
+.footerSocialsDiv {
+    gap: 1.5rem;
+}
+
+.footerIcon {
+    font-size: 1.2rem;
+    /* color: #0065FE; */
+}
+
+.footerNavContain {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footerNavDiv1 {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footerNavDiv2 {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footerNav {
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footerNavHeader {
+    color: var(--Neutral-900, #071827);
+
+    /* H4/Bold */
+    /* font-family: Gilroy-Bold; */
+    font-size: 1rem;
+    font-style: normal;
+    /* font-weight: 400; */
+    line-height: 1.5rem;
+    /* 150% */
+}
+
+.footerNavUl {
+    flex-direction: column;
+    gap: 0rem;
+}
+
+.footerNavLi {
+    color: var(--Neutral-800, #112232);
+    /* font-family: Gilroy-Medium; */
+    font-size: 1rem;
+    font-style: normal;
+    /* font-weight: 400; */
+    line-height: 1.5rem;
+    /* 150% */
+}
+
+.footerBottom {
+    color: var(--Neutral-800, #112232);
+    /* font-family: Gilroy-Medium; */
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25rem;
+
+    align-self: center;
+    /* 142.857% */
+}
+
+
+/* LARGE SCREEN */
+/* LARGE SCREEN */
+/* LARGE SCREEN */
+/* For desktop: */
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: max-content;
+        /* width: 90%; */
+        margin: 0 auto;
+        /* padding: 0 1rem; */
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .logos {
+        /* outline: auto; */
+        width: 10%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .bars {
+        display: none;
+    }
+
+    .navs,
+    .navDiv2 {
+        /* width: 90%; */
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+
+        color: var(--Text-Color-Main-text, #141414);
+        /* font-family: Gilroy-Medium; */
+        font-size: 1.125rem;
+        font-style: normal;
+        /* font-weight: 400; */
+        line-height: normal;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tryBtn {
+        width: 8.875rem;
+        height: 2.75rem;
+        padding: 0.75rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+
+        border-radius: 6.25rem;
+        border: 1px solid transparent;
+        background: var(--Primary-300---base, #0065FE);
+
+        color: var(--Neutral-White, #FFF);
+        /* font-family: Gilroy-SemiBold; */
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 0.75rem;
+        /* 75% */
+    }
+
+    main {
+        padding: 0 0rem;
+        /* height: 850vh; */
+        /* overflow: scroll; */
+    }
+
+    .hero {
+        /* height: 100vh; */
+        text-align: center;
+
+    }
+
+    .heroSpecialText {
+        display: flex;
+        align-self: center;
+        gap: 1rem;
+        /* font-weight: 700; */
+        line-height: 3rem;
+    }
+
+    .heroPhg {
+        align-self: center;
+        max-width: 70%;
+    }
+
+    .heroImage {
+        width: max-content;
+        height: auto;
+    }
+
+
+    .featuresDiv {
+        margin-top: 5rem;
+        /* text-align: center; */
+    }
+
+    .featuresInnerDiv {
+        flex-direction: row;
+        gap: 3rem;
+        width: 100%;
+        background: #deecfb;
+        align-items: center;
+        justify-content: center;
+        /* background: #F9FBFD; */
+    }
+
+    .featuresAchiveDiv {
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        /* gap: 5rem; */
+    }
+
+    .featuresHeaderDiv {
+        width: 50%;
+        color: var(--Text-Color-Main-text, #141414);
+        /* font-family: Gilroy-Bold; */
+        font-size: 1.5rem;
+        font-style: normal;
+        /* font-weight: 400; */
+        /* line-height: 3rem; */
+    }
+
+    .featuresInnerDiv1 {
+        /* width: 50%; */
+        margin-top: 4rem;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .featuresWhyHeaderDiv {
+        width: 50%;
+    }
+
+    .featuresWhyDiv {
+        width: 50%;
+        gap: 1.5rem;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .pricingDiv {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 3rem;
+    }
+
+    .pricingHeaderDiv {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 1.5rem;
+        /* text-align: center; */
+    }
+
+    .pricingHeaderPhg {
+        text-align: center;
+        max-width: 80%;
+
+    }
+
+    .pricingContainer {
+        flex-direction: row;
+        align-items: center;
+        gap: 0rem;
+    }
+
+    .pricingCardBasic {
+        width: 30%;
+    }
+
+    .pricingCardBasic {
+        /* outline: auto; */
+        flex-direction: column;
+        padding: 2rem 0rem;
+        padding-left: 0rem;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        /* height: 60vh; */
+        color: var(--Text-Color-Main-text, #141414);
+        border-radius: 0.75rem;
+        border: 0.4px solid var(--Primary-400, #005AE2);
+        background: var(--Neutral-White, #FFF);
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+        height: 50vh;
+    }
+
+
+
+    .pricingCardPro {
+        flex-direction: column;
+        padding: 2rem 0rem;
+        padding-left: 0rem;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background-color: #1E3448;
+        color: white;
+        border-radius: 0.75rem;
+        height: 60vh;
+        width: 40%;
+    }
+
+    .urlDiv {
+        height: 50vh;
+        margin-top: 5rem;
+    }
+
+    .urlForm {
+        width: 50%;
+        height: 60%;
+        gap: 1rem;
+        padding: 0rem 2rem;
+
+        /* justify-content: space-around; */
+    }
+
+    .urlSelectDiv {
+        width: 100%;
+    }
+
+    .faqsDiv {
+        margin-top: 5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .actionCallDiv {
+        margin-top: 5rem;
+        height: 25vh;
+    }
+
+    .footer {
+        margin-top: 5rem;
+        flex-direction: row;
+        position: relative;
+
+        /* gap: 3rem; */
+    }
+
+    .footerlogoDiv {
+        width: 30%;
+    }
+
+    .footerNavContain {
+        /* flex-direction: row; */
+        gap: 3rem;
+        width: 70%;
+    }
+
+    .footerNavDiv1 {
+        /* flex-direction: row; */
+        /* width: 30%; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1 1fr;
+        ;
+
+
+    }
+
+    .footerNavDiv2 {
+        flex-direction: row;
+        /* width: 30%; */
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1 1fr;
+    }
+
+    .footerBottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}

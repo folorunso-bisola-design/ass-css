@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 4</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="content">
+        <div class="parent-div">
+            <div class="left-inner-div">
+                <img src="./Logo (1).svg" alt="">
+                <h2>For Individuals</h2>
+                <p>Start benefiting from the wellness experience. For
+                    companies looking on nicreasing productivity, and improving
+                    organization wellness
+                </p>
+            </div>
+
+            <div class="form-container" >
+                <form action="">
+                    <div class="rows">
+                        <div class="box">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" id="FirstName" name="FirstName"  required placeholder="Tolu">
+                        </div>
+                        <div class="box">
+                            <label for="LastName">Last Name</label>
+                            <input type="text" id="LastName" name="LastName" required>
+                        </div>
+                    </div>
+                
+
+                        <div class="rows">
+                            <div class="box">
+                            <label for="Gender">Gender</label>
+                            <select name="Gender" id="Gender">
+                                <option value="" disabled selected hidden>Select here</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            </div>
+                            
+                            <div class="box">
+                            <label for="DOB">Date of Birth</label>
+                            <input type="date" id="DOB" name="Date of Birth"  required placeholder="Select here">
+                        </div>
+                        </div>
+                    
+
+                        <div class="rows">
+                            <div class="box">
+                            <label for="Weight">Weight (KG)</label>
+                            <input type="number" id="Weight" name="Weight" required placeholder="Enter Weight" max="500">
+                            </div>
+
+                            <div class="box">
+                            <label for="Height">Height (CM)</label>
+                            <input type="number" id="Height (CM)" name="Height (CM)" required placeholder="Enter height here" max="500">
+                            </div>
+
+                        </div>
+                    
+                    
+                    <div class="activity">
+                        <label for="Activity Level">Activity Level</label>
+                        <select name="Activity Level" id="Activity Level">
+                            <option value="" disabled selected hidden>Select here</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    <div class="passw">
+                            <label for="Password">Password</label>
+                            <input type="password" id="password" name="password"  required>
+                            <span class="eye-icon"><i class="fa fa-eye"></i></span>
+                    </div>
+
+                    <div>
+                        <button>Register</button>
+                    </div>
+                    
+                    <p>By clicking Register, you agree to our <a href="">terms of use</a> and our <a href="">privacy policy</a></p>
+                
+                    </form>                
+            </div>
+        
+        </section>
+    </main>
+</body>
+</html>

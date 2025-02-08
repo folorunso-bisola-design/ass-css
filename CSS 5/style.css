@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.body{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background: #F5F8FA;
+}
+h1,h3,a{
+    font-family: "Raleway", sans-serif;
+}
+
+.left-child h3{
+margin-bottom: 7px;
+}
+
+/* css for header-nav section */
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 0rem; 
+}
+
+.header-nav-right{
+    display: flex;
+    padding: 1rem 1rem 1rem 0rem; 
+}
+
+.header-nav-right a{
+    text-decoration: none;
+     margin-left: 2rem;
+    cursor: pointer;
+    color: black;
+    font-weight: 400;
+}
+
+.header-nav-links{
+    margin-top: 9px;
+}
+
+.header-nav-right button{
+    margin-left: 2rem;
+    width: 90px; 
+    border-radius: 7px;
+    border: 2px solid rgb(48, 47, 47);
+    padding: 11px;
+}
+
+/* styling for container */
+.container{
+    display: grid;
+    grid-template-columns: 2.5fr 1.3fr;
+    border-radius: 5px;
+    width: 850px;
+    height: 800px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* styling for left child div */
+
+.left-child{
+    background: white;
+}
+
+.left-child h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-shadow: 2px 3px 4px #92969a;
+    font-weight: 100;
+    border-bottom: 3px solid rgb(234, 234, 242);
+}
+
+/* styling for left child input and label layout */
+
+.rows{
+    display: flex;
+    gap: 2rem;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+.firstbox, .secondbox{
+    margin-top: 20px;
+    border-bottom: 3px solid rgb(234, 234, 242);
+
+}
+
+.E-mail, .Credit, .left-child h3, .left-child h1{
+    padding-left: 40px;
+}
+
+.firstbox span, .secondbox span{
+    border: 2px solid #5e92c9;
+    color: #5e92c9;
+    border-radius: 100px;
+    padding:3px 8px;
+}
+
+.E-mail, .Credit{
+    margin-top: 12px;
+}
+
+#FirstName, #LastName, #Email{
+    background: #eceff3;
+    border: none;
+    border-radius: 4px;
+}
+
+#Credit-card input{
+    background: #eceff3;
+    border: none;
+}
+
+.rows input{
+    display: block;
+    padding: 10px;
+    width: 14.1rem;
+    margin-top: 5px;
+}
+
+.E-mail input{
+    display: block;
+    padding: 10px;
+    width: 70%;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+
+.Credit input{
+    display: block;
+    padding: 10px;
+    width: 60%;
+    margin-top: 5px;
+}
+
+.card-input {
+    display: flex;
+    margin-bottom: 40px;  
+  }
+
+  .card-num {
+    width: 330px;
+  }
+  
+  #MM-YY {
+    width: 100px;
+    text-align: center;
+  }
+  #cvv {
+    width: 70px;
+    text-align: center;
+  }
+
+.firstbutton{
+    width: 86%;
+    padding: 15px;
+    background: #038766;
+    margin-left: 40px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.para span{
+    border: 2px solid green;
+  color: #5e92c9;
+  border-radius: 100px;
+  padding:3px 8px;
+
+}
+
+.para{
+    margin-left: 110px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.para p{
+    width: 350px;
+    text-align: center;
+}
+
+.secondbutton{
+    background: #a2a1a0;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    margin-left: 200px;
+    color: white;
+}
+
+.stripe{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.highlight{
+    color: #a2a1a0;
+}
+
+
+/* styling for right child div */
+.right-child{
+    color: white;
+    padding-top: 30px;
+    padding-left: 45px;
+    background: #1381c1;
+    font-weight: 100;
+}
+
+.right-child h3{
+    font-weight: bolder;
+    padding-bottom: 3px;
+}
+
+.right-child p{
+    width: 150px;
+}
+
+.yr{
+    font-weight: 100;
+    font-size: 13px;
+}
+
+#Paragraph1{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.checkmark {
+    font-size: 12px;
+    margin-right: 7px;
+    color: #cce5ff;
+    border: 1.5px solid white;
+    border-radius: 50px;
+    padding:1px 2px;
+    margin-bottom: 20px;
+  }
+
+  .right-child li{
+    margin-bottom: 20px;
+    list-style: none;
+  }
+
+
+.Client{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+.Switch{
+    border-bottom: 4px solid #70d6ff;
+    display: inline;
+    text-underline-offset: 0px; 
+}
+
+.FTP{
+    margin-top: 40px;
+}
+
+.FTP p{
+    width: 200px;
+}
+
+.photo-icon{
+    padding-top: 20px;
+    
+}
+
+.photo-icon img{
+    border-radius: 20px;
+}
+
+.Kirk{
+    text-align: center;
+    margin-top: -35px;
+    margin-left: 12px;
+}
+
+.line{
+    margin-top: 50px;
+    width: 88%;
+    height: 1px;
+    border-radius: 10px;
+    
+}
+
+footer{
+    padding-top: 30px;
+    text-align: center;
+}
+
+.Pusher{
+    color: #808488;
+    font-weight: 400;
+}
+
+.Terms{
+    color: rgb(56, 56, 163);
+}
+
+
